@@ -1,0 +1,28 @@
+# API keys and secrets
+.env
+
+# Dependency directory
+node_modules
+bower_components
+
+# Editors
+.idea
+.vscode
+*.iml
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Ignore built ts files
+dist/**/*
+public/
+
+# Logging files
+*.log
+
+DEVELOPING.md
+
+/src/resources
+/dist*/
+/resources/
