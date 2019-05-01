@@ -42,7 +42,9 @@ export abstract class BaseCompile<
               this.handledFiles.push(modelTargetFile);
               const result = this.template.compile({
                 path: path.resolve(modelTargetFile),
-                data: modelData,
+                data: {
+                  model: modelData,
+                },
               });
               modelTargetFile = modelTargetFile.replace(
                 path.extname(modelTargetFile),
@@ -72,7 +74,9 @@ export abstract class BaseCompile<
           let modelTargetFile = targetFile;
           const result = this.template.compile({
             path: path.resolve(modelTargetFile),
-            data: modelData,
+            data: {
+              model: modelData,
+            },
           });
           const modelTargetFileBaseName = path.basename(modelTargetFile);
           // 只替换basename部分
@@ -120,7 +124,9 @@ export abstract class BaseCompile<
             templateFiles.map(async (targetFile: string) => {
               const result = this.template.compile({
                 path: path.resolve(targetFile),
-                data: models,
+                data: {
+                  models,
+                },
               });
               targetFile = targetFile.replace(path.extname(targetFile), '');
               return fs.writeFile(targetFile, result);
