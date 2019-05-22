@@ -23,7 +23,7 @@ export class ArtCompile extends BaseCompile<ModelsInterface, ArtTemplate> {
     const isDeleteTemplate: boolean = process.argv[5] === 'true';
     const { data } = await axios.get(`/api/projects/${projectId}/models/json`, {
       proxy: {
-        host: '127.0.0.1',
+        host: 'backend',
         port: 3001,
       },
     });
