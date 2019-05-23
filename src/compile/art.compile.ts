@@ -20,7 +20,8 @@ export class ArtCompile extends BaseCompile<ModelsInterface, ArtTemplate> {
   public async compile() {
     const templatePath: string = process.argv[3];
     const projectId: number = _.toNumber(process.argv[4]);
-    const isDeleteTemplate: boolean = process.argv[5] === 'true';
+    // @ts-ignore
+    const isDeleteTemplate: boolean = process.argv[5] == false;
     const { data } = await axios.get(`/api/projects/${projectId}/models/json`, {
       proxy: {
         host: '172.17.0.1',
