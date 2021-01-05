@@ -15,7 +15,7 @@
     "@types/lodash": "^4.14.123",
     "@types/node": "^11.13.8",
     "art-template": "^4.13.2",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "del": "^4.1.0",
     "fs-extra": "^7.0.1",
     "lodash": "^4.17.11",
